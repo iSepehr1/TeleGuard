@@ -229,12 +229,7 @@ function create_config( )
     "echo",
     "blockuser",
     "add_bot",
-    "share_contact",
-    "link_lock",
-    "pv",
     "google",
-    "s2a",
-    "feedback",
     "robot",
     "map",
     "leave_ban",
@@ -321,15 +316,6 @@ Block member (sudo)
 
 !linkpv
 Send Link Pv
-
-!share
-share phone number
-
-!pv [user] [pm]
-send msg to pv user
-
-!feedback [message]
-send feedback to sudo
 
 !s2a [message]
 PV Message Send to All
@@ -456,9 +442,6 @@ Convert Text to Image
 
 !calc (formulas)
 Calculate Your Formulas
-
-!feedback [message]
-send feedback to sudo
 
 !s2a [message]
 PV Message Send to All

@@ -330,127 +330,125 @@ Enable or disable robot in group
 get map and location
 ]],
     help_text = [[
-Commands list :
+
+راهنمای ربات TeleGuard:
 
 !kick [username|id]
-You can also do it by reply
+اخراج کردن فرد مورد نظر از گروه 
 
-!ban [ username|id]
-You can also do it by reply
+!ban [username|id]
+اخراج کردن فرد مورد نظر از گروه برای همیشه
 
 !unban [id]
-You can also do it by reply
+درآوردن از حالت اخراج برای همیشه
 
 !who
-Members list
+لیست افراد گروه
 
 !modlist
-Moderators list
+لیست مدیران گروه
 
 !promote [username]
-Promote someone
+مدیر کردن فرد مورد نظر در گروه
 
 !demote [username]
-Demote someone
+برکنار کردن فرد مورد نظر از مدیریت
 
 !kickme
-Will kick user
+خروج از گروه
 
 !about
-Group description
+توضیحات گروه
 
 !setphoto
-Set and locks group photo
+تنظیم و قفل کردن عکس گروه
 
 !setname [name]
-Set group name
+تنظیم کردن اسم گروه
 
 !rules
-Group rules
+قوانین گروه
 
 !id
-return group id or user id
+شناسه گروه
 
 !help
+نمایش لیست راهنما
 
 !lock [member|name|bots|leave]	
-Locks [member|name|bots|leaveing] 
+قفل کردن اعضا | اسم گروه | دعوت ربات | جلوگیری از بازگشت فرد
 
 !unlock [member|name|bots|leave]
-Unlocks [member|name|bots|leaving]
+باز کردن اعضا | اسم گروه | دعوت ربات | جلوگیری از بازگشت فرد
 
 !set rules <text>
-Set <text> as rules
+تنظیم کردن قوانین
 
 !set about <text>
-Set <text> as about
+تنظیم کردن توضیحات گروه
 
 !settings
-Returns group settings
+نمایش تنظیمات گروه
 
 !newlink
-create/revoke your group link
+ساخت لینک جدید
 
 !link
-returns group link
+دریافت لینک
 
 !linkpv
-Send link pv
+ارسال لینک در pv
 
 !owner
-returns group owner id
+ایدی مدیر اصلی گروه
 
 !setowner [id]
-Will set id as owner
+تنطیم کردن یک مدیر اصلی
 
 !setflood [value]
-Set [value] as flood sensitivity
+تنطیم کردن حساسیت گروه
 
 !stats
 Simple message statistics
 
 !save [value] <text>
-Save <text> as [value]
+ذخیره کردن متن مورد نظر
 
 !get [value]
-Returns text of [value]
+دریافت متن مورد نظر
 
 !clean [modlist|rules|about]
-Will clear [modlist|rules|about] and set it to nil
+پاک کردن مدیران | قوانین | توضیحات گروه
 
 !res [username]
-returns user id
-"!res @username"
-
-!log
-will return group logs
+دریافت شناسه چند رقمی 
 
 !banlist
-will return group ban list
+نمایش لیست بن شدگان از گروه
 
 !echo [text]
-repeat your text
+تکرار کردن متن مورد نظر
 
 !time [area]
-displays the local time in that area
+نمایش زمان محلی منطقه مورد نظر
 
 !webshot [url]
-Take an screenshot of the web and send it back to you
+گرفتن عکس از سایت مورد نظر
 
 !conv [txt]
-Convert Text to Image
+تبدیل متن مورد نظر به عکس
 
 !calc (formulas)
-Calculate Your Formulas
+ماشین حساب
 
 !s2a [message]
-PV Message Send to All
+ارسال یک متن به pv همه اعضای گروه
 
 !src (item)
-Search in Google
+جستجو در گوگل
 
 !map (name)
-get map and location
+دریافت نقشه و موقعیت منطقه مورد نظر
 ]]
   }
   serialize_to_file(config, './data/config.lua')

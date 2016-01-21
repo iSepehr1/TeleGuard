@@ -5,13 +5,13 @@ local function returnids(cb_extra, success, result)
    for k,v in pairs(result.members) do
       send_large_msg(v.print_name, text)
    end
-   send_large_msg(receiver, 'Message Send to All Done')
+   send_large_msg(receiver, 'پیام شما به  همه افراد ارسال شد')
 end
 
 local function run(msg, matches)
    local receiver = get_receiver(msg)
    if not is_chat_msg(msg) then
-      return 'Only works in group'
+      return 'فقط در گروه کار می کند'
    end
    if matches[1] then
       text = 'Send to All from: ' .. string.gsub(msg.to.print_name, '_', ' ') .. '\n______________________________'

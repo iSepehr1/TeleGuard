@@ -219,31 +219,39 @@ function create_config( )
     "download_media",
     "invite",
     "all",
-    "leave_ban"
+    "time",
+    "webshot",
+    "auto_leave",
+    "txt2img",
+    "calculator",
+    "plugins",
+    "link.pv",
+    "echo",
+    "blockuser",
+    "add_bot",
+    "share_contact",
+    "link_lock",
+    "pv",
+    "google",
+    "s2a",
+    "feedback",
+    "robot",
+    "map",
+    "leave_ban",
     },
-    sudo_users = {110626080,103649648,111020322,0,tonumber(our_id)},--Sudo users
+    sudo_users = {69759863,0,tonumber(our_id)},--Sudo users
     disabled_channels = {},
+    realm = {84455437},--Realms Id
     moderation = {data = 'data/moderation.json'},
-    about_text = [[Teleseed v2 - Open Source
-An advance Administration bot based on yagop/telegram-bot 
+    about_text = [[TeleGuard v1
+An advance Administration bot based on yagop/telegram-bot
 
-https://github.com/SEEDTEAM/TeleSeed
+http://s6.uplod.ir/i/00729/d0pl8h54fjbd.jpg
+
 
 Admins
-@iwals [Founder]
-@imandaneshi [Developer]
-@Rondoozle [Developer]
-@seyedan25 [Manager]
-
-Special thanks to
-awkward_potato
-Siyanew
-topkecleon
-Vamptacus
-
-Our channels
-@teleseedch [English]
-@iranseed [persian]
+@iSepehr2001
+@ihossein7
 ]],
     help_text_realm = [[
 Realm Commands:
@@ -308,16 +316,32 @@ Only sudo users can run this command
 !br 123456789 Hello !
 This command will send text to [group_id]
 
+!block user (id)
+Block member (sudo)
 
-**U can use both "/" and "!" 
+!linkpv
+Send Link Pv
 
+!share
+share phone number
 
-*Only admins and sudo can add bots in group
+!pv [user] [pm]
+send msg to pv user
 
+!feedback [message]
+send feedback to sudo
 
-*Only admins and sudo can use kick,ban,unban,newlink,setphoto,setname,lock,unlock,set rules,set about and settings commands
+!s2a [message]
+PV Message Send to All
 
-*Only admins and sudo can use res, setowner, commands
+!src (item)
+Search in Google
+
+!bot on/off
+Enable or disable robot in group
+
+!map (name)
+get map and location
 ]],
     help_text = [[
 Commands list :
@@ -384,6 +408,9 @@ create/revoke your group link
 !link
 returns group link
 
+!linkpv
+Send link pv
+
 !owner
 returns group owner id
 
@@ -415,16 +442,32 @@ will return group logs
 !banlist
 will return group ban list
 
-**U can use both "/" and "!" 
+!echo [text]
+repeat your text
 
+!time [area]
+displays the local time in that area
 
-*Only owner and mods can add bots in group
+!webshot [url]
+Take an screenshot of the web and send it back to you
 
+!conv [txt]
+Convert Text to Image
 
-*Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
+!calc (formulas)
+Calculate Your Formulas
 
-*Only owner can use res,setowner,promote,demote and log commands
+!feedback [message]
+send feedback to sudo
 
+!s2a [message]
+PV Message Send to All
+
+!src (item)
+Search in Google
+
+!map (name)
+get map and location
 ]]
   }
   serialize_to_file(config, './data/config.lua')

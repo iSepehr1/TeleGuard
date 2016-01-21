@@ -17,13 +17,13 @@ local function enable_channel(receiver)
 	end
 
 	if _config.disabled_channels[receiver] == nil then
-		return 'Robot is Online'
+		return 'در حال حاضر ربات روشن است'
 	end
 	
 	_config.disabled_channels[receiver] = false
 
 	save_config()
-	return "Robot is Online"
+	return "در حال حاضر ربات روشن است"
 end
 
 local function disable_channel( receiver )
@@ -34,7 +34,7 @@ local function disable_channel( receiver )
 	_config.disabled_channels[receiver] = true
 
 	save_config()
-	return "Robot is Offline"
+	return "در حال حاضر ربات خاموش است"
 end
 
 local function pre_process(msg)
@@ -43,7 +43,7 @@ local function pre_process(msg)
 	-- If sender is moderator then re-enable the channel
 	--if is_sudo(msg) then
 	if is_momod(msg) then
-	  if msg.text == "[!/]bot on" then
+	  if msg.text == "[]bot on" then
 	    enable_channel(receiver)
 	  end
 	end
@@ -70,11 +70,11 @@ end
 return {
 	description = "Robot Switch", 
 	usage = {
-		"/bot on : enable robot in group",
-		"/bot off : disable robot in group" },
+		"bot on : enable robot in group",
+		"bot off : disable robot in group" },
 	patterns = {
-		"^[!/]bot? (on)",
-		"^[!/]bot? (off)" }, 
+		"^[]bot? (on)",
+		"^[]bot? (off)" }, 
 	run = run,
 	privileged = true,
 	--moderated = true,

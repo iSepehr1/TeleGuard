@@ -10,7 +10,6 @@ return {patterns = {
     "http://",
     "https://",
     "adf.ly"
-    },
-    run = run
-  }
-  end
+ }, 
+  run = run
+}

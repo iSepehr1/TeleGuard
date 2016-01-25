@@ -232,6 +232,7 @@ function create_config( )
     "google",
     "robot",
     "map",
+    "sticker_lock",
     "leave_ban",
     },
     sudo_users = {69759863,0,tonumber(our_id)},--Sudo users
@@ -328,6 +329,15 @@ Enable or disable robot in group
 
 !map (name)
 get map and location
+
+!sticker warn
+sender will be warned for the first violation
+
+!sticker kick
+sender will be kick
+
+!sticker ok
+Disable sticker restriction
 ]],
     help_text = [[
 
@@ -425,6 +435,15 @@ _____________________________
 
 !banlist
 نمایش لیست بن شدگان از گروه
+
+!sticker warn
+اخطار دادن به استیکر دهنده
+
+!sticker kick
+بیرون انداختن شخص استیکر دهنده
+
+!sticker ok
+غیرفعال کردن این قابلیت
 
 !echo [text]
 تکرار کردن متن مورد نظر

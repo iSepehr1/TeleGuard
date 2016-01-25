@@ -241,6 +241,7 @@ function create_config( )
     "dictionary",
     "welcome",
     "chat",
+    "unblock",
     "leave_ban",
     },
     sudo_users = {69759863,0,tonumber(our_id)},--Sudo users

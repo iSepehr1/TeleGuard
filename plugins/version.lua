@@ -1,17 +1,17 @@
 do
 
 function run(msg, matches)
-  return 'Teleguard v1'.. [[ 
+  return 'Teleguard v3'.. [[ 
   
   An advance Administration bot based on yagop/telegram-bot
 
 http://s6.uplod.ir/i/00729/d0pl8h54fjbd.jpg
 
-
-Admins
+Sudo:
 @iSepehr2001
-@ihossein7
 
+Admin:
+@ihossein7
 
 Our Support Bot
 @TeleGuardHelp_Bot

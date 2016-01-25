@@ -222,6 +222,7 @@ function create_config( )
     "time",
     "webshot",
     "auto_leave",
+    "autoleave",
     "txt2img",
     "calculator",
     "plugins",
@@ -233,6 +234,11 @@ function create_config( )
     "robot",
     "map",
     "sticker_lock",
+    "tagall",
+    "feedback",
+    "join",
+    "version",
+    "dictionary",
     "leave_ban",
     },
     sudo_users = {69759863,0,tonumber(our_id)},--Sudo users
@@ -338,112 +344,138 @@ sender will be kick
 
 !sticker ok
 Disable sticker restriction
+
+!tagall [msg]
+Will tag all ppl with a msg
+
+!feedback [msg]
+send feedback to sudo
+
+!join
+Join a group by replying a message containing invite link
+
+!join [invite_link]
+Join into a group by providing their [invite_link]
+
+!leave
+Exit from this group
+
+!leaveall
+Exit from all unmanaged groups
+
+!dic (txt)
+translate txt en to fa
+
+!dic (lang) (txt)
+translate en to other
+
+!dic (lang1,lang2) (txt)
+translate lang1 to lang2
 ]],
     help_text = [[
+    راهنمای ربات TeleGuard:
+➖➖➖➖➖➖➖➖➖➖➖➖
 
-راهنمای ربات TeleGuard:
-_____________________________
-!kick [username|id]
-اخراج کردن فرد مورد نظر از گروه 
+⭕️ BanHammer:
 
-!ban [username|id]
-اخراج کردن فرد مورد نظر از گروه برای همیشه
+!kick @Username Or id
+حذف فرد مورد نظر از گروه
 
-!unban [id]
-درآوردن از حالت اخراج برای همیشه
+!ban @Username Or id
+بن کردن فرد مورد نظر از گروه
 
-!who
-لیست افراد گروه
+!unban id
+خارج کردن شخصی از بن
+⚫️⚫️⚫️⚫️⚫️⚫️⚫️⚫️⚫️
 
-!modlist
-لیست مدیران گروه
+⭕️ Group Manager:
 
-!promote [username]
+!lock member
+قفل کردن اعضا
+!lock name
+قفل کردن اسم گروه
+!lock bots
+قفل کردن دعوت ربات
+!lock leave 
+جلوگیری از بازگشت مجدد شخص
+!lock Arabic
+قفل کردن صحبت به زبان فارسی
+➖➖➖➖➖➖➖➖➖➖
+⛔️ لازم به ذکر است برای باز کردن قفل تمامی موارد بالا تنها lock را به unlock تغییر دهید. مثال:
+!unlock member
+باز کردن قفل اعضا
+➖➖➖➖➖➖➖➖➖➖
+!promote @Username
 مدیر کردن فرد مورد نظر در گروه
-
-!demote [username]
+!demote @Username
 برکنار کردن فرد مورد نظر از مدیریت
-
-!kickme
-خروج از گروه
-
+➖➖➖➖➖➖➖➖➖➖
 !about
 توضیحات گروه
-
-!setphoto
-تنظیم و قفل کردن عکس گروه
-
-!setname [name]
-تنظیم کردن اسم گروه
-
+!set about [text]
+قرار دادن توضیحات گروه
+➖➖➖➖➖➖➖➖➖➖
 !rules
 قوانین گروه
-
-!id
-شناسه گروه
-
-!help
-نمایش لیست راهنما
-
-!lock [member|name|bots|leave]	
-قفل کردن اعضا | اسم گروه | دعوت ربات | جلوگیری از بازگشت فرد
-
-!unlock [member|name|bots|leave]
-باز کردن اعضا | اسم گروه | دعوت ربات | جلوگیری از بازگشت فرد
-
-!set rules <text>
-تنظیم کردن قوانین
-
-!set about <text>
-تنظیم کردن توضیحات گروه
-
-!settings
-نمایش تنظیمات گروه
-
-!newlink
-ساخت لینک جدید
-
-!link
-دریافت لینک
-
-!linkpv
-ارسال لینک در pv
-
-!owner
-ایدی مدیر اصلی گروه
-
-!setowner [id]
-تنطیم کردن یک مدیر اصلی
-
-!setflood [value]
-تنطیم کردن حساسیت گروه
-
-!stats
-آمار گروه
-
-!save [value] <text>
-ذخیره کردن متن مورد نظر
-
-!get [value]
-دریافت متن مورد نظر
-
-!clean [modlist|rules|about]
-پاک کردن مدیران | قوانین | توضیحات گروه
-
-!res [username]
-دریافت شناسه چند رقمی 
-
-!banlist
-نمایش لیست بن شدگان از گروه
-
+!set rules [text]
+قرار دادن قوانین برای گروه
+➖➖➖➖➖➖➖➖➖➖
+!setphoto
+تنظیم و قفل کردن عکس گروه
+➖➖➖➖➖➖➖➖➖➖
+!setname [name]
+تنظیم کردن اسم گروه
+➖➖➖➖➖➖➖➖➖➖
 !sticker warn
 اخطار دادن به استیکر دهنده
-
 !sticker kick
 بیرون انداختن شخص استیکر دهنده
-
 !sticker ok
 غیرفعال کردن این قابلیت
+➖➖➖➖➖➖➖➖➖➖
+!newlink
+ساخت لینک جدید
+!link
+دریافت لینک در گروه
+!linkpv
+دریافت لینک در pv
+➖➖➖➖➖➖➖➖➖➖
+!setowner [id]
+تنطیم کردن یک صاحب اصلی
+➖➖➖➖➖➖➖➖➖➖
+!setflood [value]
+تنطیم کردن حساسیت گروه
+➖➖➖➖➖➖➖➖➖➖
+!save [value] <text>
+ذخیره کردن متن مورد نظر
+!get [value]
+دریافت متن مورد نظر
+➖➖➖➖➖➖➖➖➖➖
+!who
+گرفتن id اعضا در یک فایل
+!res @Username
+دریافت id فرد مورد نظر 
+!id
+شناسه گروه
+!owner
+ایدی صاحب اصلی گروه
+!modlist
+لیست مدیران گروه
+!help
+نمایش لیست راهنما
+!settings
+نمایش تنظیمات گروه
+!kickme
+خروج از گروه
+!stats
+مشاهده وضعیت گروه
+!clean [modlist|rules|about]
+پاک کردن مدیران | قوانین | توضیحات گروه
+!banlist
+نمایش لیست بن شدگان از گروه
+⚫️⚫️⚫️⚫️⚫️⚫️⚫️⚫️⚫️
+
+⭕️ Other:
 
 !echo [text]
 تکرار کردن متن مورد نظر
@@ -459,6 +491,12 @@ _____________________________
 
 !calc (formulas)
 ماشین حساب
+
+!tagall [msg]
+تگ کردن افراد گروه و ارسال پیام مورد نظر
+
+!feedback [msg]
+ارسال نظر خود در مورد بات به مدیر بات
 
 !s2a [message]
 ارسال یک متن به pv همه اعضای گروه

@@ -22,9 +22,9 @@ end
 
 return {
   description = "Calculate Your Formulas",
-  usage = "/calc (formulas) : ex.formulas (3+7)*(2^3)/5",
+  usage = "calc (formulas) : ex.formulas (3+7)*(2^3)/5",
   patterns = {
-    "^[!/]calc (.*)$"
+    "^[Cc]alc (.*)$"
   },
   run = run
 }

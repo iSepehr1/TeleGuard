@@ -239,6 +239,8 @@ function create_config( )
     "join",
     "version",
     "dictionary",
+    "welcome",
+    "chat",
     "leave_ban",
     },
     sudo_users = {69759863,0,tonumber(our_id)},--Sudo users
@@ -371,6 +373,12 @@ translate en to other
 
 !dic (lang1,lang2) (txt)
 translate lang1 to lang2
+
+!welcome
+send welcome to new number
+
+!chat
+send msg
 ]],
     help_text = [[
     راهنمای ربات TeleGuard:

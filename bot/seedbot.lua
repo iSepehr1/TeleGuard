@@ -233,15 +233,11 @@ function create_config( )
     "google",
     "robot",
     "map",
-    "sticker_lock",
     "tagall",
-    "feedback",
     "join",
     "version",
     "dictionary",
     "welcome",
-    "chat",
-    "unblock",
     "leave_ban",
     },
     sudo_users = {69759863,0,tonumber(our_id)},--Sudo users
@@ -339,20 +335,8 @@ Enable or disable robot in group
 !map (name)
 get map and location
 
-!sticker warn
-sender will be warned for the first violation
-
-!sticker kick
-sender will be kick
-
-!sticker ok
-Disable sticker restriction
-
 !tagall [msg]
 Will tag all ppl with a msg
-
-!feedback [msg]
-send feedback to sudo
 
 !join
 Join a group by replying a message containing invite link
@@ -377,9 +361,6 @@ translate lang1 to lang2
 
 !welcome
 send welcome to new number
-
-!chat
-send msg
 ]],
     help_text = [[
     راهنمای ربات TeleGuard:
@@ -434,13 +415,6 @@ send msg
 ➖➖➖➖➖➖➖➖➖➖
 !setname [name]
 تنظیم کردن اسم گروه
-➖➖➖➖➖➖➖➖➖➖
-!sticker warn
-اخطار دادن به استیکر دهنده
-!sticker kick
-بیرون انداختن شخص استیکر دهنده
-!sticker ok
-غیرفعال کردن این قابلیت
 ➖➖➖➖➖➖➖➖➖➖
 !newlink
 ساخت لینک جدید
@@ -503,12 +477,6 @@ send msg
 
 !tagall [msg]
 تگ کردن افراد گروه و ارسال پیام مورد نظر
-
-!feedback [msg]
-ارسال نظر خود در مورد بات به مدیر بات
-
-!s2a [message]
-ارسال یک متن به pv همه اعضای گروه
 
 !src (item)
 جستجو در گوگل

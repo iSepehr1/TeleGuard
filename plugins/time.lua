@@ -94,7 +94,9 @@ end
 
 return {
   description = "Displays the local time in an area", 
-  usage = "!time [area]: Displays the local time in that area",
-  patterns = {"^!time (.*)$"}, 
+  usage = "time [area]: Displays the local time in that area",
+  patterns = {
+    "^[Tt]ime (.*)$",
+  }, 
   run = run
 }

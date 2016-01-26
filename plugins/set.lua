@@ -1,6 +1,6 @@
 local function save_value(msg, name, value)
   if (not name or not value) then
-    return "Usage: !set var_name value"
+    return "Usage: set var_name value"
   end
   local hash = nil
   if msg.to.type == 'chat' then
@@ -25,7 +25,7 @@ end
 
 return {
   patterns = {
-   "^[!/]save ([^%s]+) (.+)$"
+   "^[Ss]ave ([^%s]+) (.+)$"
   }, 
   run = run 
 }

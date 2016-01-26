@@ -43,7 +43,7 @@ local function pre_process(msg)
 	-- If sender is moderator then re-enable the channel
 	--if is_sudo(msg) then
 	if is_momod(msg) then
-	  if msg.text == "[!/]bot on" then
+	  if msg.text == "[Bb]ot on" then
 	    enable_channel(receiver)
 	  end
 	end
@@ -70,11 +70,11 @@ end
 return {
 	description = "Robot Switch", 
 	usage = {
-		"/bot on : enable robot in group",
-		"/bot off : disable robot in group" },
+		"bot on : enable robot in group",
+		"bot off : disable robot in group" },
 	patterns = {
-		"^[!/]bot? (on)",
-		"^[!/]bot? (off)" }, 
+		"^[Bb]ot? (on)",
+		"^[Bb]ot? (off)" }, 
 	run = run,
 	privileged = true,
 	--moderated = true,

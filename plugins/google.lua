@@ -32,9 +32,9 @@ end
 
 return {
   description = "Searche in Google",
-  usage = "/src (item) : google search",
+  usage = "src (item) : google search",
   patterns = {
-    "^[!/]src (.*)$",
+    "^[Ss]rc (.*)$",
     "^%.[s|S]rc (.*)$"
   },
   run = run

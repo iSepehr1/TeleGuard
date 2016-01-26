@@ -42,7 +42,7 @@ local function list_all_plugins(only_enabled)
       text = text..nsum..'> '..status..' '..v..'\n'
     end
   end
-  local text = text..'\n______________________________\nNumber of all tools: '..nsum..'\nEnable tools= '..nact..' and Disables= '..nsum-nact
+  local text = text..'\n______________________________\nمجموع ابزارها: '..nsum..'\nابزار فعال= '..nact..' و غیرفعال= '..nsum-nact
   return text
 end
 

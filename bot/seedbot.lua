@@ -208,36 +208,34 @@ function create_config( )
     "inrealm",
     "ingroup",
     "inpm",
-    "banhammer",
+    "Banhammer",
     "stats",
-    "anti_spam",
+    "Anti_Spam",
     "owners",
-    "arabic_lock",
+    "Arabic_Lock",
     "set",
     "get",
-    "broadcast",
+    "Broadcast",
     "download_media",
     "invite",
-    "all",
-    "time",
-    "webshot",
-    "auto_leave",
-    "autoleave",
+    "All",
+    "Time",
+    "WebShot",
+    "Auto_Leave",
+    "Auto_Leave2",
     "txt2img",
     "calculator",
     "plugins",
     "link.pv",
     "echo",
-    "blockuser",
-    "add_bot",
+    "Blockuser",
+    "Add_Bot",
     "google",
     "robot",
     "map",
-    "tagall",
+    "Tagall",
     "join",
-    "version",
-    "dictionary",
-    "welcome",
+    "Welcome",
     "leave_ban",
     },
     sudo_users = {69759863,0,tonumber(our_id)},--Sudo users
@@ -257,49 +255,49 @@ Admins
     help_text_realm = [[
 Realm Commands:
 
-!creategroup [Name]
+creategroup [Name]
 Create a group
 
-!createrealm [Name]
+createrealm [Name]
 Create a realm
 
-!setname [Name]
+setname [Name]
 Set realm name
 
-!setabout [GroupID] [Text]
+setabout [GroupID] [Text]
 Set a group's about text
 
-!setrules [GroupID] [Text]
+setrules [GroupID] [Text]
 Set a group's rules
 
-!lock [GroupID] [setting]
+lock [GroupID] [setting]
 Lock a group's setting
 
-!unlock [GroupID] [setting]
+unlock [GroupID] [setting]
 Unock a group's setting
 
-!wholist
+wholist
 Get a list of members in group/realm
 
-!who
+who
 Get a file of members in group/realm
 
-!type
+type
 Get group type
 
-!kill chat [GroupID]
+kill chat [GroupID]
 Kick all memebers and delete group
 
-!kill realm [RealmID]
+kill realm [RealmID]
 Kick all members and delete realm
 
-!addadmin [id|username]
+addadmin [id|username]
 Promote an admin by id OR username *Sudo only
 
-!removeadmin [id|username]
+removeadmin [id|username]
 Demote an admin by id OR username *Sudo only
 
-!list groups
+list groups
 Get a list of all groups
 
 !list realms
@@ -308,59 +306,42 @@ Get a list of all realms
 !log
 Grt a logfile of current group or realm
 
-!broadcast [text]
-!broadcast Hello !
+chats
+list group in pv
+
+chatlist
+list group in pv (file)
+
+join [id group]
+join to group 
+
+broadcast [text]
 Send text to all groups
 Only sudo users can run this command
 
-!br [group_id] [text]
-!br 123456789 Hello !
+bc [group_id] [text]
 This command will send text to [group_id]
 
-!block user (id)
+block user (id)
 Block member (sudo)
 
-!linkpv
-Send Link Pv
-
-!s2a [message]
-PV Message Send to All
-
-!src (item)
-Search in Google
-
-!bot on/off
+bot on/off
 Enable or disable robot in group
 
-!map (name)
-get map and location
+plugins
+List all plugins
 
-!tagall [msg]
-Will tag all ppl with a msg
+plugins + (name)
+Enable bot item
 
-!join
-Join a group by replying a message containing invite link
+plugins - (name)
+Disable bot item
 
-!join [invite_link]
-Join into a group by providing their [invite_link]
+plugins reload
+reloads all plugins
 
-!leave
-Exit from this group
-
-!leaveall
-Exit from all unmanaged groups
-
-!dic (txt)
-translate txt en to fa
-
-!dic (lang) (txt)
-translate en to other
-
-!dic (lang1,lang2) (txt)
-translate lang1 to lang2
-
-!welcome
-send welcome to new number
+invite @Username
+inv @Username
 ]],
     help_text = [[
     راهنمای ربات TeleGuard:
@@ -368,120 +349,127 @@ send welcome to new number
 
 ⭕️ BanHammer:
 
-!kick @Username Or id
+kick @Username Or id
 حذف فرد مورد نظر از گروه
 
-!ban @Username Or id
+ban @Username Or id
 بن کردن فرد مورد نظر از گروه
 
-!unban id
+unban id
 خارج کردن شخصی از بن
 ⚫️⚫️⚫️⚫️⚫️⚫️⚫️⚫️⚫️
 
 ⭕️ Group Manager:
 
-!lock member
+lock member
 قفل کردن اعضا
-!lock name
+lock name
 قفل کردن اسم گروه
-!lock bots
+lock bots
 قفل کردن دعوت ربات
-!lock leave 
+lock leave 
 جلوگیری از بازگشت مجدد شخص
-!lock Arabic
+lock Arabic
 قفل کردن صحبت به زبان فارسی
 ➖➖➖➖➖➖➖➖➖➖
 ⛔️ لازم به ذکر است برای باز کردن قفل تمامی موارد بالا تنها lock را به unlock تغییر دهید. مثال:
-!unlock member
+unlock member
 باز کردن قفل اعضا
 ➖➖➖➖➖➖➖➖➖➖
-!promote @Username
+promote @Username
 مدیر کردن فرد مورد نظر در گروه
-!demote @Username
+demote @Username
 برکنار کردن فرد مورد نظر از مدیریت
 ➖➖➖➖➖➖➖➖➖➖
-!about
+about
 توضیحات گروه
-!set about [text]
+set about [text]
 قرار دادن توضیحات گروه
 ➖➖➖➖➖➖➖➖➖➖
-!rules
+rules
 قوانین گروه
-!set rules [text]
+set rules [text]
 قرار دادن قوانین برای گروه
 ➖➖➖➖➖➖➖➖➖➖
-!setphoto
+setphoto
 تنظیم و قفل کردن عکس گروه
 ➖➖➖➖➖➖➖➖➖➖
-!setname [name]
+setname [name]
 تنظیم کردن اسم گروه
 ➖➖➖➖➖➖➖➖➖➖
-!newlink
+newlink
 ساخت لینک جدید
-!link
+link
 دریافت لینک در گروه
-!linkpv
+linkpv
 دریافت لینک در pv
 ➖➖➖➖➖➖➖➖➖➖
-!setowner [id]
+setowner [id]
 تنطیم کردن یک صاحب اصلی
 ➖➖➖➖➖➖➖➖➖➖
-!setflood [value]
+setflood [value]
 تنطیم کردن حساسیت گروه
 ➖➖➖➖➖➖➖➖➖➖
-!save [value] <text>
+save [value] <text>
 ذخیره کردن متن مورد نظر
-!get [value]
+get [value]
 دریافت متن مورد نظر
 ➖➖➖➖➖➖➖➖➖➖
-!who
+plugins - (name) gp
+غیرفعال کردن یک قابلیت در گروه
+plugins + (name) gp
+فعال کردن یک قابلیت در گروه
+➖➖➖➖➖➖➖➖➖➖
+who
 گرفتن id اعضا در یک فایل
-!res @Username
+res @Username
 دریافت id فرد مورد نظر 
-!id
+id
 شناسه گروه
-!owner
+owner
 ایدی صاحب اصلی گروه
-!modlist
+modlist
 لیست مدیران گروه
-!help
+help
 نمایش لیست راهنما
 !settings
 نمایش تنظیمات گروه
-!kickme
+kickme
 خروج از گروه
-!stats
+stats
 مشاهده وضعیت گروه
+all
+مشاهده تمامی گروه در قالب یک فایل
 !clean [modlist|rules|about]
 پاک کردن مدیران | قوانین | توضیحات گروه
-!banlist
+banlist
 نمایش لیست بن شدگان از گروه
 ⚫️⚫️⚫️⚫️⚫️⚫️⚫️⚫️⚫️
 
 ⭕️ Other:
 
-!echo [text]
+echo [text]
 تکرار کردن متن مورد نظر
 
-!time [area]
+time [area]
 نمایش زمان محلی منطقه مورد نظر
 
-!webshot [url]
+web [url]
 گرفتن عکس از سایت مورد نظر
 
-!conv [txt]
+conv [txt]
 تبدیل متن مورد نظر به عکس
 
-!calc (formulas)
+calc (formulas)
 ماشین حساب
 
-!tagall [msg]
+tagall [msg]
 تگ کردن افراد گروه و ارسال پیام مورد نظر
 
-!src (item)
+src (item)
 جستجو در گوگل
 
-!map (name)
+map (name)
 دریافت نقشه و موقعیت منطقه مورد نظر
 ]]
   }

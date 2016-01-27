@@ -52,13 +52,13 @@ local function description_rules(msg, nama)
       local rules = ""
       if data[tostring(msg.to.id)]["description"] then
          about = data[tostring(msg.to.id)]["description"]
-         about = "\nAbout :\n"..about.."\n"
+         about = "\nتوضیحات گروه :\n"..about.."\n"
       end
       if data[tostring(msg.to.id)]["rules"] then
          rules = data[tostring(msg.to.id)]["rules"]
-         rules = "\nRules :\n"..rules.."\n"
+         rules = "\nقوانین گروه :\n"..rules.."\n"
       end
-local sambutan = "سلام"..nama.."\nWelcome to '"..string.gsub(msg.to.print_name, "_", " ").."'/nاز شما درخواست می شود با وارد کردن دستور rules از قوانین و مقررات این گروه مطلع شوید. باتشکر\n"
+local sambutan = "سلام"..nama.."\nبه گروه'"..string.gsub(msg.to.print_name, "_", " ").."خوش آمدید'"
       local text = sambutan..about..rules.."\n"
       local receiver = get_receiver(msg)
       send_large_msg(receiver, text, ok_cb, false)

@@ -42,22 +42,22 @@ local function run(msg, matches)
 	 local data = load_data(_config.moderation.data)
     if matches[1] == 'join' and data[tostring(matches[2])] then
         if is_banned(msg.from.id, matches[2]) then
-	    return 'You are banned.'
+	    return 'شما بن شده اید.'
 	 end
       if is_gbanned(msg.from.id) then
-            return 'You are globally banned.'
+            return 'شما از تمامی گروه ها بن شده اید'
       end
       if data[tostring(matches[2])]['settings']['lock_member'] == 'yes' and not is_owner2(msg.from.id, matches[2]) then
-        return 'Group is private.'
+        return 'گروه مورد نظر خصوصی است'
       end
           local chat_id = "chat#id"..matches[2]
           local user_id = "user#id"..msg.from.id
    	  chat_add_user(chat_id, user_id, ok_cb, false)   
 	  local group_name = data[tostring(matches[2])]['settings']['set_name']	
-	  return "Added you to chat:\n\n👥"..group_name.." (ID:"..matches[2]..")"
+	  return "شما به گروه مورد نظر دعوت شدید:\n\n👥"..group_name.." (ID:"..matches[2]..")"
         elseif matches[1] == 'join' and not data[tostring(matches[2])] then
 		
-         	return "Chat not found."
+         	return "گروه مورد نظر پیدا نشد"
         end
      if matches[1] == 'chats'then
        if is_admin(msg) and msg.to.type == 'chat' then
@@ -78,10 +78,10 @@ end
 
 return {
     patterns = {
-      "^[/!](chats)$",
-      "^[/!](chatlist)$",
-      "^[/!](join) (.*)$",
-      "^[/!](kickme) (.*)$",
+      "^[Cc]hats$",
+      "^[Cc]hatlist$",
+      "^[Jj]oin (.*)$",
+      "^[Kk]ickme (.*)$",
       "^!!tgservice (chat_add_user)$"
     },
     run = run,

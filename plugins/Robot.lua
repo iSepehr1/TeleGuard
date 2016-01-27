@@ -17,13 +17,13 @@ local function enable_channel(receiver)
 	end
 
 	if _config.disabled_channels[receiver] == nil then
-		return 'Robot is Online'
+		return 'ربات روشن است'
 	end
 	
 	_config.disabled_channels[receiver] = false
 
 	save_config()
-	return "Robot is Online"
+	return "ربات روشن است"
 end
 
 local function disable_channel( receiver )
@@ -34,7 +34,7 @@ local function disable_channel( receiver )
 	_config.disabled_channels[receiver] = true
 
 	save_config()
-	return "Robot is Offline"
+	return "ربات خاموش است"
 end
 
 local function pre_process(msg)

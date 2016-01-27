@@ -72,7 +72,6 @@ local function bot_stats()
   local redis_scan = [[
     local cursor = '0'
     local count = 0
-
     repeat
       local r = redis.call("SCAN", cursor, "MATCH", KEYS[1])
       cursor = r[1]
@@ -83,18 +82,18 @@ local function bot_stats()
   -- Users
   local hash = 'msgs:*:'..our_id
   local r = redis:eval(redis_scan, 1, hash)
-  local text = 'Users: '..r
+  local text = 'تعداد کاربران: '..r
 
   hash = 'chat:*:users'
   r = redis:eval(redis_scan, 1, hash)
-  text = text..'\nGroups: '..r
+  text = text..'\nتعداد گروه ها: '..r
   return text
 end
 local function run(msg, matches)
   if matches[1]:lower() == 'TeleGuard' then -- Put everything you like :)
     local about = _config.about_text
     local name = user_print_name(msg.from)
-    savelog(msg.to.id, name.." ["..msg.from.id.."] used /TeleGuard ")
+    savelog(msg.to.id, name.." ["..msg.from.id.."] used TeleGuard ")
     return about
   end 
   if matches[1]:lower() == "statslist" then
@@ -120,16 +119,16 @@ local function run(msg, matches)
         return
       end
     end
-    if matches[2] == "Teleguard" then -- Put everything you like :)
+    if matches[2] == "TeleGuard" then -- Put everything you like :)
       if not is_admin(msg) then
-        return "For admins only !"
+        return "برای شما مجاز نیست"
       else
         return bot_stats()
       end
     end
     if matches[2] == "group" then
       if not is_admin(msg) then
-        return "For admins only !"
+        return "برای شما مجاز نیست"
       else
         return chat_stats(matches[3])
       end
@@ -142,7 +141,7 @@ return {
     "^[Ss]tatslist$",
     "^[Ss]tats (group) (%d+)",
     "^[Ss]tats (TeleGuard)",-- Put everything you like :)
-		"^[Tt]eleGuard"-- Put everything you like :)
+		"^[Tt]eleGuard)"-- Put everything you like :)
     }, 
   run = run
 }

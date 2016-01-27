@@ -108,7 +108,7 @@ local function set_description(target, about)
   local data_cat = 'description'
   data[tostring(target)][data_cat] = about
   save_data(_config.moderation.data, data)
-  return 'درباره گروه ثبت شدند:\n'..about
+  return 'توضیحات گروه ثبت شد:\n'..about
 end
 
 local function run(msg, matches)

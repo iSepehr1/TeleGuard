@@ -11,7 +11,7 @@ local function mathjs(exp)
   elseif c == 400 then
     text = b
   else
-    text = 'Error!'
+    text = 'معادله وارد شده صحیح نیست'
   end
   return text
 end

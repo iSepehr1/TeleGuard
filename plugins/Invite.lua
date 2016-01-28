@@ -34,7 +34,6 @@ end
 return {
     patterns = {
       "^[Ii]nvite (.*)$"
-      "^[Ii]nv (.*)$"
     },
     run = run
 }

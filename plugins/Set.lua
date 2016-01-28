@@ -8,12 +8,12 @@ local function save_value(msg, name, value)
   end
   if hash then
     redis:hset(hash, name, value)
-    return "ذخیره شد "..name
+    return "Saved "..name
   end
 end
 local function run(msg, matches)
   if not is_momod(msg) then
-    return "برای شما مجاز نیست"
+    return "For moderators only!"
   end
   local name = string.sub(matches[1], 1, 50)
   local value = string.sub(matches[2], 1, 1000)
@@ -29,4 +29,3 @@ return {
   }, 
   run = run 
 }
-

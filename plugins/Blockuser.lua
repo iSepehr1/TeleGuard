@@ -3,7 +3,7 @@ local function block_user_callback(cb_extra, success, result)
   local receiver = cb_extra.receiver
   local user = 'user#id'..result.id
   if success == 0 then
-    return send_large_msg(receiver, "فرایند بلاک کردن فرد ناموفق بود!")
+    return send_large_msg(receiver, "Block Process Failed")
   end
   block_user(user, cb_ok, false)
 end
@@ -18,9 +18,9 @@ local function run(msg, matches)
       block_user(user, callback, false)
     end
 	        if not is_sudo(msg) or is_realm(msg) and is_admin(msg) then
-    return 'فقط sudo میتواند بلاک کند'
+    return 'BLOCK ONLY BY SUDO'
   end
-    return "فرد مورد نظر از ربات بلاک شد"
+    return "I Have Blocked User"
   end
 end
 

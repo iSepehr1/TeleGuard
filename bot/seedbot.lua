@@ -228,7 +228,6 @@ function create_config( )
     "OnService",
     "Owners",
     "Plugins",
-    "Robot",
     "Set",
     "Stats",
     "Tagall",
@@ -431,7 +430,7 @@ modlist
 لیست مدیران گروه
 help
 نمایش لیست راهنما
-!settings
+settings
 نمایش تنظیمات گروه
 kickme
 خروج از گروه
@@ -439,7 +438,7 @@ stats
 مشاهده وضعیت گروه
 all
 مشاهده تمامی گروه در قالب یک فایل
-!clean [modlist|rules|about]
+clean [modlist|rules|about]
 پاک کردن مدیران | قوانین | توضیحات گروه
 banlist
 نمایش لیست بن شدگان از گروه
